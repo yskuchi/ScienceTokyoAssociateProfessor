@@ -1,0 +1,190 @@
+\documentclass[11pt,a4paper,uplatex,dvipdfmx]{ujarticle} 		% for uplatex
+%\documentclass[11pt,a4j,dvipdfmx]{jarticle} 					% for platex
+%\documentclass[11pt,pdflatex,a4paper,ja=standard]{bxjsarticle}
+\usepackage{amsmath}  
+\input{pieces/form00_header} % pieces
+\input{pieces/kakenhi7} % pieces
+\input{pieces/form01_header} % pieces
+%\input{pieces/form02_2020_header} % pieces
+%\input{pieces/hook3} % pieces
+%#Name: kiban_a
+\input{pieces/form04_jsps_headers} % pieces
+\input{pieces/form04_kiban_a_header} % pieces
+% ===== Global definitions for the Kakenhi form ======================
+%　基本情報
+%
+%------ 研究課題名  -------------------------------------------
+\newcommand{\研究課題名}{象の卵}
+
+%----- 研究機関名と研究代表者の氏名-----------------------
+\newcommand{\研究機関名}{東京大学}
+\newcommand{\研究代表者氏名}{内山雄祐}
+\newcommand{\me}{\underline{Y.~Uchiyama}} 
+%---- 研究期間の最終年度 ----------------
+\newcommand{\研究期間の最終元号年度}{6}  %令和で，半角数字のみ
+%========================================
+
+%\input{pieces/inst_general} % pieces
+%\input{pieces/inst_kiban_a} % pieces
+% user07_header
+% ===== my favorite packages ====================================
+% ここに，自分の使いたいパッケージを宣言して下さい。
+\usepackage{wrapfig}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{txfonts}
+\usepackage{newtxtext,newtxmath}
+\usepackage{pifont} % 丸数字を使うためのパッケージ
+%\usepackage{mb}
+%\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\usepackage{lineno}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{pxjahyper}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks=true,
+    citecolor=blue,
+    linkcolor=blue,
+    urlcolor=blue,
+}
+\renewcommand{\emph}[1]{{\sffamily\bfseries{#1}}}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\huge\sffamily\bfseries}
+\titleformat*{\subsection}{\large\sffamily\bfseries}
+%\renewcommand{\thesection}{\textsf{\arabic{section}}}
+
+% ===== my personal definitions ==================================
+% ここに，自分のよく使う記号などを定義して下さい。
+\newcommand{\klpionn}{K_L \to \pi^0 \nu \overline{\nu}}
+\newcommand{\kppipnn}{K^+ \to \pi^+ \nu \overline{\nu}}
+%%% new symbols
+%\newcommand*{\meg}{\mu\to e \gamma}
+%\newcommand*{\megc}{\ifmmode\mu^+ \to e^+ \gamma\else$\mu^+ \to e^+ \gamma$\fi}
+\newcommand*{\meg}{\muup\to \mathrm{e} \gammaup}
+\newcommand*{\megc}{\ifmmode\muup^+ \to \mathrm{e}^+ \gammaup\else$\muup^+ \to \mathrm{e}^+ \gammaup$\fi}
+\newcommand*{\rmd}{\ifmmode\muup^+ \to \mathrm{e}^+ \nuup_\mathrm{e} \bar{\nuup}_\muup \gammaup\else$\muup^+ \to \mathrm{e}^+ \nuup_\mathrm{e} \bar{\nuup}_\muup \gammaup$\fi}
+\newcommand*{\ee}{\mathrm{e^+e^-}}
+%e%% end new symbols
+
+
+% ===== 欄外メモ ==================
+\newcommand{\memo}[1]{\marginpar{#1}}
+%\renewcommand{\memo}[1]{}	% 全てのメモを表示させないようにするには，行頭の"%"を消す
+
+
+%\input{../../sample/simple/contents}	% skip
+\input{pieces/hook5} % pieces
+
+\begin{document}
+\input{pieces/hook7} % pieces
+
+
+%#Split: 03_abilities  
+%#PieceName: p03_abilities
+\input{pieces/p01_purpose_plan_00}
+%\input{pieces/p03_abilities_00}
+\noindent
+
+\input{list.tex}
+	
+\newpage
+
+\section{研究歴}
+\vspace{2zw}
+
+私はこれまで一貫して，超高エネルギー物理の解明を目指した素粒子実験の研究をしてきた。標準理論では禁止されている，荷電レプトンのフレーバーを破るミュー粒子の稀崩壊事象を探索し，超対称大統一理論やニュートリノ質量の背後にある物理を通したバリオン数生成など，根源的な宇宙の謎の解明に挑んできた。
+おもな実績は，
+\begin{itemize}
+  \setlength{\parskip}{0cm} % 段落間
+  \setlength{\itemsep}{0cm} % 項目間
+\item	\emph{MEG実験の完遂により世界最高感度での\megc 崩壊探索を実現した}
+\item	\emph{MEG II実験の考案から立ち上げまでをやり遂げ，物理データ取得開始を実現した}
+\end{itemize}
+ことである。
+国際共同実験であるMEG・MEG II実験の立案から測定器開発，物理解析に至るまで中心となって推進してきた中核となるメンバーである。革新的検出器を開発し\cite{Adam:2013vqa}，MEG実験ではそれまでの上限値を30倍更新する新しい上限値を設定した\cite{TheMEG:2016wtm}。
+MEG II実験はさらにその感度を10倍更新する計画で\cite{upgrade_proposal, Baldini:2018nnn}，測定器の開発・制作を完了し\cite{Mori:highenergy}，ついに昨年度，最初の物理データ取得に成功した\cite{cdch_2023,ptc_2023,trigger_2023,xec_2023}。
+
+\subsection{MEG実験}
+MEG実験では\emph{液体キセノン検出器を用いたガンマ線の解析を責任者として担当}した。詳細な波形解析手法と較正手法を確立し，検出効率64\%，エネルギー分解能1.6\%，時間分解能63~psを達成した\cite{gamma_rec, TheMEG:2016wtm}。
+検出器の高い性能を発揮するには，較正が最も大事である。様々な較正データを統合的に分析し，大型検出器における非一様性およびエネルギースケールを系統不確かさ0.3\%にまで抑えることに成功した。
+新しい波形解析アルゴリズムはより高いレートでの実験を可能にするもので，MEG II実験における高レートビーム下でもパイルアップを分離することで性能を落とすことなく液体キセノン検出器を運転できることを実証した。
+
+以下の物理解析を主導し物理結果をパブリッシュした。
+\paragraph{\megc 崩壊探索}
+検出器の場所による応答の違いや変数間の相関を研究し尤度関数に組み込むことで探索感度を最大限に高めた解析手法を開発した。世界最高感度を達成し，分岐比上限値：
+\begin{equation}
+\mathcal{B}(\megc) < 4.2×10^{-13} \quad  (90\%\ \mathrm{C.L.})
+\end{equation}
+を与えた\cite{TheMEG:2016wtm}。これはあらゆる粒子の崩壊分岐比に対する最も小さな上限値となっており，様々な新物理理論に厳しい制限を与える結果となっている。
+
+\paragraph{ミュー粒子放射ミシェル崩壊の解析}
+放射ミシェル崩壊\rmd は\megc 事象の背景事象となる一方で，$\mathrm{e}$--$\gammaup$間の時間較正源として活用できる。さらに，その崩壊確率と分布は電弱相互作用で計算できることに着目し，独自にデータを解析して実験全体の正当性を実証した。この崩壊を用いたミュー粒子の規格化因子および偏極度の新しい測定手法を確立した\cite{rmd1}。7\%を計上していた規格因子不確かさを4\%に抑えることに成功した。この崩壊モードにおける最高精度の測定を実現し\cite{Adam:2013gfn}，結果はParticle Data Bookにも掲載されている。
+
+\paragraph{新しい崩壊モード$\muup^+\to\mathrm{e}^+\mathrm{X},\mathrm{X}\to\gammaup\gammaup$}
+このモード独自の2光子再構成手法やキネマティクスを用いた事象再構成手法を大学院生とともに開発。データに基づいた背景事象推定や系統不確かさの取り扱いなど統計手法を主導した。このモードの世界最初の探索結果をパブリッシュした\cite{MEx2G}。
+
+
+\subsection {MEG II実験}
+%\begin{wrapfigure}[13]{r}{9cm}
+%	\centering
+%	 \vspace{-0zw}
+%	\includegraphics[width=1.0\linewidth]{figs/pTCPic}
+%	 \caption{MEG IIタイミングカウンターと開発を担当した大学院生（2020年2月，本人・中央）}
+%	\label{fig:pTCPic}         
+%\end{wrapfigure}
+
+
+12年度よりアップグレード実験MEG IIを推進\cite{upgrade_proposal}。陽電子の時間を高精度で測定する\emph{細分型シンチレーションタイミングカウンターの開発を責任者としてイタリアグループとの国際協力を構築・主導}しながら進めてきた。SiPM読出しの時間分解能を追究し，独自の読出し・解析手法を確立し\cite{tc-single}，35~psの時間分解能を実現する検出器を開発した\cite{laser, vci2016}。
+15年よりMEG IIビームを用いたパイロットランを他の検出器に先駆け実施し，読み出し回路やトリガー・DAQの開発を推し進めるなど，実験全体を先駆してきた。17年に実機を完成させた\cite{vci2019}（図 \ref{fig:pTCPic}）。
+開発した技術は論文にまとめ\cite{radiation, laser, btf2014, tc-single}，国内外の学会で広く報告・議論をしてきた。その結果，PANDA TOF，Mu2e ECAL, J-PARC E42/45 ホドスコープ，ハイパー核寿命測定実験 TDLなど素粒子・原子核実験の多くの測定器に波及し，関連技術のスタンダードとなっている。
+
+19年度よりMEG II実験成功のカギを握っているドリフトチェンバーの解析に着手。新学術公募研究において，他に類を見ない高計数率下での高効率解析手法を実データに基づいて開発している。デジタルフィルターを駆使した波形解析に加え，深層学習を活用した全く新しい波形解析を開発した。
+
+MEG II実験の\emph{コンピューティング・ソフトウェアコーディネーター}も兼任しており，若手研究（B）では大量のデータをリアルタイムで解析することで，信号事象を取りこぼすことなくデータ量を削減する手法とシステムを構築した。
+最新のソフトウェアを導入しながら解析・シミュレーションコードの開発を指揮している。MEG II実験に必要な計算機資源を見積もり，PSI計算機グループと共同で専用の計算機システムを構築した。オンラインシステムからアーカイブシステムまでの自動データ転送システムやオフライン解析の自動化システムを開発し運用している。最近では，コンテナ技術を用いた解析環境の可用性の拡張・保存や，深層学習を解析に取り入れるための統一解析フレームワークの開発などを進めている。
+
+\subsection{将来計画}
+日本物理学会にて「DCミューオンビームによるcLFV探索」（第68回（2013）次大会【招待講演】）や「崩壊分岐比感度$10^{-15}$の新しい\megc 探索実験の検討」（2014年秋季大会）でMEG II実験の先の実験設計を発表・議論するなど，次世代の荷電レプトンフレーバー物理実験を主導している\cite{himb}。
+
+
+
+\subsection{教育実績}
+東京大学の大学院生指導を13年間にわたり行い，学生の教育と研究者育成にも力を注いできた。MEG実験のデータ解析やMEG IIタイミングカウンターの開発を研究した学生とは，文字通り寝食を共にしながら研究を進め，各局面における課題を解決する実践力を身に着けさせることを意識して指導をしてきた。%主体性を育むために常に学生自身に調べ・考え・手を動かすことを求めている。
+これまでにMEG実験物理解析で博士論文6本（うち3本日本物理学会若手奨励賞受賞），タイミングカウンターの開発で修士論文6本（うち1本測定器開発優秀修士論文賞受賞），博士論文2本を直接指導し輩出した実績をもつ。
+
+大学院生を対象にした「稀崩壊探索実験に必要な統計解析」講座（全8回）や素粒子実験用ソフトウェア・解析講習会（全7回）を実施したり，夏にPSI研究所を訪れた総研大や九州大の学生を含めた学生ゼミを主催したりした経験がある。エキスパティーズとしては，素粒子物理学・素粒子実験・粒子検出器・光検出器・データ解析・統計解析・プログラミング・真空技術など。
+
+
+\subsection{受賞・獲得研究資金}
+\paragraph{受賞歴}
+\begin{itemize}
+  \setlength{\parskip}{0cm} % 段落間
+  \setlength{\itemsep}{0cm} % 項目間
+\item Best poster award in the 1st workshop on the Charged Lepton Flavor Violation (2013) \cite{rmd1}
+\item 第5回 日本物理学会若手奨励賞 (素粒子実験領域) (2011)
+\item 第12回 高エネルギー物理学奨励賞 (2010)
+\item NIM-A Young Scientist Award (於 第11回ピサ会議) (2009) \cite{gamma_rec}
+\end{itemize}
+
+\paragraph{獲得研究資金}
+\begin{itemize}
+  \setlength{\parskip}{0cm} % 段落間
+  \setlength{\itemsep}{0cm} % 項目間
+\item 新学術領域研究（ニュートリノで拓く素粒子と宇宙）公募研究「極低物質量・高計数率飛跡検出器で挑む荷電レプトンフレーバーの破れの探索」研究代表者2021年4月--2023年3月
+\item 基盤研究(A)「高分解能大型液体キセノン測定器によるレプトン普遍性の破れの精密検証」
+研究分担者（研究代表者：森俊則）2020年4月--2024年3月
+\item 若手研究(B) 「ミュー粒子稀崩壊探索実験のさらなる高輝度化に向けたソフトウェアトリガーの開発」研究代表者2017年4月--2019年3月
+\item 特別研究員奨励費 「ミュー粒子稀崩壊探索実験による超対称性理論の検証」研究代表者2007年4月--2009年3月
+\end{itemize}
+
+\newpage
+
+\input{plan}
+
+
+%#Split: 99_tail
+\input{pieces/hook9} % pieces
+\end{document}
+
